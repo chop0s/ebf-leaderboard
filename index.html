@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Boss Fight Reborn</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <h1 class="logo">⚔️ Epic Boss Fight <span>Reborn</span></h1>
+            <nav>
+                <a href="#leaderboard" class="active">Leaderboard</a>
+                <a href="#patchnotes">Patch Notes</a>
+                <a href="#donate">Donate</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- LEADERBOARD -->
+        <section id="leaderboard">
+            <h2>🏆 Leaderboard</h2>
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('mmr')">Top MMR</button>
+                <button class="tab-btn" onclick="switchTab('wr')">Top Win Rate</button>
+            </div>
+
+            <div id="tab-mmr" class="tab-content active">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Player</th>
+                            <th>MMR</th>
+                            <th>Plays</th>
+                            <th>Wins</th>
+                            <th>Losses</th>
+                            <th>Win Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mmr-tbody">
+                        <tr><td colspan="7" class="loading">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="tab-wr" class="tab-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Player</th>
+                            <th>MMR</th>
+                            <th>Plays</th>
+                            <th>Wins</th>
+                            <th>Losses</th>
+                            <th>Win Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody id="wr-tbody">
+                        <tr><td colspan="7" class="loading">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- PATCH NOTES -->
+        <section id="patchnotes">
+            <h2>📋 Patch Notes</h2>
+            <div id="patchnotes-content" class="markdown-body">
+                <p class="loading">Loading...</p>
+            </div>
+        </section>
+
+        <!-- DONATE -->
+        <section id="donate">
+            <h2>❤️ Support the Project</h2>
+            <div class="donate-box">
+                <p>EBF Reborn is a passion project maintained by the community.<br>Your support helps keep the servers running and new content coming!</p>
+                <div class="donate-buttons">
+                    <a href="#" class="donate-btn">DonationAlerts</a>
+                    <a href="#" class="donate-btn secondary">Boosty</a>
+                </div>
+                <p class="donate-note">All donations go directly to server costs and development.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Epic Boss Fight Reborn &mdash; Dota 2 Custom Game &mdash; <a href="https://github.com/chop0s/ebf-leaderboard" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
